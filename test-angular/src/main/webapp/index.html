@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="OFS Portal">
+    <title>OFS Portal</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ui-grid/ui-grid.css" rel="stylesheet">
+    <link href="app/styles/main.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+
+    <ng-include src="'app/common/header.html'"></ng-include>
+
+    <div ng-view />
+
+    <ng-include src="'app/common/footer.html'"></ng-include>
+
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+    <script type="text/javascript" src="lib/angular-ui/angular-ui-sortable.js"></script>
+    <script type="text/javascript" src="lib/angular-local-storage/angular-local-storage.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-0.12.0.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script type="text/javascript" src="lib/ui-grid/ui-grid.js"></script>
+
+    <script type="text/javascript" src="app/dashboard/scripts/adf.js"></script>
+    <script type="text/javascript" src="app/dashboard/scripts/provider.js"></script>
+    <script type="text/javascript" src="app/dashboard/scripts/widget-content.js"></script>
+    <script type="text/javascript" src="app/dashboard/scripts/widget.js"></script>
+    <script type="text/javascript" src="app/dashboard/scripts/dashboard.js"></script>
+    <script type="text/javascript" src="app/dashboard/scripts/column.js"></script>
+    <script type="text/javascript" src="app/dashboard/scripts/row.js"></script>
+
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/common/common.js"></script>
+    <script type="text/javascript" src="app/common/common-controller.js"></script>
+    <script type="text/javascript" src="app/dashboard/dashboard.js"></script>
+    <script type="text/javascript" src="app/dashboard/dashboard-controller.js"></script>
+
+    <script type="text/javascript" src="app/widgets/leavebalance/leavebalance.js"></script>
+    <script type="text/javascript" src="app/widgets/leavebalance/leavebalance-controller.js"></script>
+    <script type="text/javascript" src="app/widgets/leavebalance/leavebalance-service.js"></script>
+
+    <script type="text/javascript" src="app/widgets/quicklinks/quicklinks.js"></script>
+    <script type="text/javascript" src="app/widgets/quicklinks/quicklinks-controller.js"></script>
+    <script type="text/javascript" src="app/widgets/quicklinks/quicklinks-service.js"></script>
+
+    <script type="text/javascript" src="app/widgets/outstandingtasks/outstandingtasks.js"></script>
+    <script type="text/javascript" src="app/widgets/outstandingtasks/outstandingtasks-controller.js"></script>
+    <script type="text/javascript" src="app/widgets/outstandingtasks/outstandingtasks-service.js"></script>
+
+    <script type="text/javascript" src="app/widgets/myrequests/myrequests.js"></script>
+    <script type="text/javascript" src="app/widgets/myrequests/myrequests-controller.js"></script>
+    <script type="text/javascript" src="app/widgets/myrequests/myrequests-service.js"></script>
+</body>
+</html>

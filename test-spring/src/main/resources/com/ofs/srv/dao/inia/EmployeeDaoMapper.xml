@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ofs.srv.dao.inia.EmployeeDao">
+
+    <select id="getEmployeeApproverInfo" parameterType="String" resultType="approverInfo">
+        SELECT
+           p.id AS projectId,
+           p.name AS projectName,
+           ga.name AS approvalLevel,
+           ga.login AS name,
+           ga.mail AS emailId,
+           m.created_on as createdOn
+        FROM
+           users u
+        JOIN
+           members m 
+              ON u.id = m.user_id
+        JOIN
+           projects p 
+              ON m.project_id = p.id
+        JOIN
+           (
+              SELECT
+                 p.id AS project_id,
+                 p.name AS project_name,
+                 u.login,
+                 u.mail,
+                 r.name
+              FROM
+                 member_roles mr
+              JOIN
+                 roles r 
+                    ON mr.role_id = r.id
+              JOIN
+                 members m 
+                    ON mr.member_id = m.id
+              JOIN
+                 projects p 
+                    ON m.project_id =  p.id
+              JOIN
+                 users u 
+                    ON m.user_id = u.id
+              WHERE
+                 r.name IN ('L1', 'L2', 'L3')
+              ORDER BY
+                 p.id,
+                 r.name
+           ) ga 
+              ON p.id = ga.project_id
+        WHERE
+           u.login = #{loginName}
+        order by m.created_on desc
+    </select>
+
+    <select id="getUserRoles" parameterType="String" resultType="string">
+        SELECT DISTINCT r.NAME as name
+        FROM   roles r 
+               JOIN member_roles mr 
+                 ON mr.role_id = r.id 
+               JOIN members m 
+                 ON m.id = mr.member_id 
+               JOIN users u 
+                 ON u.id = m.user_id 
+        WHERE  u.login = #{loginName}; 
+    </select>
+</mapper>

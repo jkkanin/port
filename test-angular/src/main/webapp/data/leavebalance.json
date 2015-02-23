@@ -1,0 +1,13 @@
+[{
+    "leaveType": "CL",
+    "availableLeaves": 7,
+    "pendingApproval": 1
+}, {
+    "leaveType": "PL",
+    "availableLeaves": 10,
+    "pendingApproval": 0
+}, {
+    "leaveType": "SL",
+    "availableLeaves": 5,
+    "pendingApproval": 0
+}]

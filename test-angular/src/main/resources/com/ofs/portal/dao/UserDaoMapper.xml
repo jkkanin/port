@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ofs.portal.dao.UserDao">
+
+    <resultMap id="widgetsResult" type="com.ofs.portal.model.Widget" autoMapping="true">
+        <result property="name" column="name" javaType="string"/>
+        <result property="description" column="description" javaType="string" />
+    </resultMap>
+    <select id="getWidgets" parameterType="java.util.List" resultMap="widgetsResult">
+        SELECT DISTINCT w.NAME 
+        FROM   widgets w 
+               JOIN widgets_role wr 
+                 ON wr.widget_id = w.id 
+               JOIN role r 
+                 ON r.id = wr.role_id 
+        WHERE  r.NAME IN
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")" > 
+           #{item} 
+        </foreach> 
+    </select>
+
+</mapper>

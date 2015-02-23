@@ -1,0 +1,16 @@
+<div class="portlet" id="{{definition.type}}">
+  <div class="portlet-header">
+    <h5>{{definition.title}}</h5>
+    <div class="actions">
+        <button class="btn btn-xs" title="remove widget" ng-click="close()">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <button class="btn btn-xs" title="expand widget" ng-click="isCollapsed = !isCollapsed">
+            <span class="glyphicon glyphicon-resize-small"></span>
+        </button>
+    </div>
+  </div>
+  <div class="portlet-content" collapse="isCollapsed">
+    <adf-widget-content model="definition" content="widget" />
+  </div>
+</div>
