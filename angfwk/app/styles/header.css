@@ -1,0 +1,77 @@
+header{
+	background:#fff;
+	height:51px;
+	font-size:13px;
+}
+header ul li{
+	float:left;
+}
+.mainlogo{
+	padding:12px 84px 0 23px;
+}
+.tabControl li{
+	border-top:2px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	color:#A7A7A7;
+	cursor:pointer;
+	display:block;
+	padding:0 20px 0 40px;
+	text-transform:upperCase;
+	line-height:49px;
+}
+.tabControl li:hover,.tabControl li.active{
+	color:#2C92C9;
+}
+.tabControl li.active{
+	color:#2C92C9;
+	background-color:#F2F6F9;
+	border-top:2px solid #E1E5E7;
+	border-left:1px solid #E1E5E7;
+	border-right:1px solid #E1E5E7;
+}
+.finished,.floorDDL,.loginDetails{
+	color:#7FB0DA;
+	float:right;
+}
+.loginDetails ul{
+	line-height:35px;
+	padding:8px 12px 0 0;
+}
+.loginUserName{
+	border-left:1px solid #EFEFEF;
+	padding:0 7px 0 17px;
+}
+.loginUserImage{
+	border-radius:50%;
+	overflow:hidden;
+	height:37px;
+	width:37px;
+}
+.loginUserImage img{
+	height:37px;
+	width:37px;
+}
+.floorDDL{
+	float:right;
+	padding:17px 4px 0 0;
+}
+.floorDDL select{
+	border:none;
+	color:#7FB0DA;
+	font-size:13px;
+}
+.finished{
+	border-right:1px solid #EFEFEF;
+	padding:0 18px 0 0;
+	margin:8px 10px 0 0;
+}
+.finishBtn{
+	background:#1E8BC6;
+	border:1px solid #DADADA;
+	border-radius:5px;
+	color:#fff;
+	font-size:13px;
+	padding:0 18px 0 41px;
+	height:34px;
+}

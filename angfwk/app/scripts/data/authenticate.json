@@ -1,0 +1,8 @@
+{
+  "UserId": "U001",
+  "UserName": "admin",
+  "EmployeeId": "E001",
+  "FullName": "Nick",
+  "Role": "Supervisor",
+  "UserToken": "123asdf456asdf"
+}

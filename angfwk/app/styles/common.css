@@ -1,0 +1,68 @@
+/* Reset and Common */
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:#E9ECF3;
+	font-family:arial;
+	font-size:12px;
+}
+body,html{
+	height:100%;
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+*:focus {
+    outline: 0;
+}
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.clear{
+	clear:both;
+}
+@font-face {
+  font-family: 'icon';
+  src: url('../fonts/icon.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/icon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/icon.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/icon.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/icon.svg') format('svg'); /* Legacy iOS */
+}
+.icon{
+	font-family:icon;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	position:relative;
+	font-size:16px;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+input[type="button"]{
+	cursor:pointer;
+}
+.mainContainer{
+	height: auto;
+	position: relative;
+	overflow-x:hidden;
+}
+.leftContent{
+	float: left;
+	margin: 14px;
+}
+.rightContent{
+	margin:0 30px 0 208px;
+	overflow-x:hidden;
+}

@@ -1,0 +1,173 @@
+.accordion{
+	background: #fff;
+	padding:8px 0 0 0;
+	width:178px;
+}
+.SearchPlanned{
+	background:#F2F2F2;
+	border:1px solid #DADADA;
+	position:relative;
+	margin:0 auto;
+	height:37px;
+	width:158px;
+}
+.SearchPlanned input[type="text"]{
+	background:none;
+	border:none;
+	color:#666666;
+	font-size:15px;
+	height:37px;
+	padding:0 10px;
+	width:114px;
+}
+.SearchPlanned input[type="button"]{
+	position: absolute;
+	right: 0;
+	border: none;
+	height: 37px;
+	width: 37px;
+}
+.menuTitle{
+	border-bottom:1px solid #d4d4d4;
+	color:#485A6A;
+	text-transform:upperCase;
+	font-size:12px;
+	text-indent:30px;
+	line-height:25px;
+	padding:30px 0 7px 0;
+	margin:0 auto;
+	width:158px;
+}
+.accMenu > li{
+	border-left:3px solid #fff;
+	border-bottom:1px solid #F8F8F8;
+}
+.accMenu > li:hover{
+	background:#EDEDED;
+	border-left:3px solid #B3B3B3;
+}
+.accMenu > li.active{
+	background:#F2F6F9 !important;
+	border-left:3px solid #5C9ACF !important;
+}
+.accMenu > li  a{
+	display:block;
+	color:#6A7986;
+	padding:15px 9px 10px;
+}
+.accMenu > li:hover > a{
+	color:#000;
+}
+.accMenu > li.active > a{
+	color:#5BA6DC !important;
+}
+.accMenu > li li{
+	border-top:1px solid #fff;
+}
+.accMenu > li li:hover,.accMenu > li li.active{
+	background:#fff;
+}
+.accMenu > li li a{
+	padding:15px 9px 10px 30px;
+}
+.accMenu > li li:hover > a{
+	color:#5BA6DC;
+}
+.accMenu ul{
+	display:none;
+}
+.gobalTaskIcon{
+	background:url(../images/Global_tasks.png) no-repeat 5px 29px;
+}
+.collectionIcon{
+	background:url(../images/Collection.png) no-repeat 0 29px;
+}
+.searchIcons{
+	background:url(../images/search.png) no-repeat center;
+}
+.taskIcons,.timeIcons{
+	position:relative;
+}
+.taskIcons::before,
+.timeIcons::before{
+	content:'';
+	position:absolute;
+	left:15px;
+	top:15px;
+	height:20px;
+	width:20px;
+}
+.taskIcons::before{
+	background: url(../images/tabIcons.png) no-repeat center 0px;
+}
+.taskIcons:hover::before,.active.taskIcons::before{
+	background-position: center -19px;
+}
+.timeIcons::before{
+	background: url(../images/tabIcons.png) no-repeat center -39px;
+}
+.timeIcons:hover::before,.active.timeIcons::before{
+	background-position: center -61px;
+}
+.titleBar{
+	margin:14px 21px 10px 22px;
+}
+.pageTitle{
+	color:#485A6A;
+	font-size:24px;
+	font-weight:normal;
+	vertical-align:middle;
+	float:left;
+	padding:6px 0 0 0;
+}
+.links,.filterControls{
+	float:right;
+}
+.links li,.filterControls li{
+	float:left;
+}
+.links li{
+	margin:15px 33px 0 0;
+}
+.links a{
+	color:#666666;
+}
+.links a:hover,
+.links .active{
+	border-bottom:3px solid #1E8BC6;
+}
+.filterControls .btn{
+	background:#fff;
+	border:1px solid #DADADA;
+	border-radius:5px;
+	color:#666666;
+	cursor:pointer;
+	position:relative;
+	padding:14px 17px 12px 36px;
+	margin:0 0 0 11px;
+}
+.filterControls .btn:hover{
+	background:#EDEDED;
+	border-color:#B3B3B3;
+}
+.filterIcon::before,
+.sortIcon::before,
+.viewIcon::before{
+	content:'';
+	position:absolute;
+	left:10px;
+	top:13px;
+	height:20px;
+	width:20px;
+}
+.filterIcon::before{
+	background: url(../images/filter.png) no-repeat center 0px;
+}
+.sortIcon::before{
+	background: url(../images/Sort.png) no-repeat center 0px;
+	top:10px;
+}
+.viewIcon::before{
+	background: url(../images/view.png) no-repeat center 0px;
+	top:10px;
+}

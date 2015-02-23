@@ -1,0 +1,109 @@
+<div class="mainContainer" data-ng-controller="MainCtrl">
+    <header>
+        <ul>
+            <li class="mainlogo"><img src="images/dashLogo_SM.png"/></li>
+            <li>
+                <ul class="tabControl">
+                    <li class="taskIcons active">Tasks</li>
+                    <li class="timeIcons">150802_1300</li>
+                </ul>
+            </li>
+            <li class="loginDetails">
+                <ul>
+                    <li class="loginUserName">Nick</li>
+                    <li class="loginUserImage"><img src="images/human.jpg"/></li>
+                </ul>
+            </li>
+            <li class="floorDDL">
+                <select>
+                    <option>Shop Floor Control</option>
+                    <option>Shop Floor Control1</option>
+                    <option>Shop Floor Control2</option>
+                </select>
+            </li>
+            <li class="finished"><input type="button" value="Finished" class="finishBtn"></li>
+        </ul>
+        <div class="clear"></div>
+    </header>
+    <aside class="leftContent">
+        <div class="accordion">
+            <div class="SearchPlanned">
+                <input type="text" placeholder="Search Planned">
+                <input type="button" class="searchIcons">
+            </div>
+            <h2 class="menuTitle gobalTaskIcon">GLOBAL TASKS</h2>
+            <nav>
+                <ul class="accMenu">
+                    <li><a href="">Selected</a></li>
+                    <li><a href="">Active (2)</a></li>
+                    <li><a href="">Started (4)</a></li>
+                    <li class="active"><a href="">Planned (20)</a></li>
+                    <li><a href="">Finished (2)</a></li>
+                </ul>
+            </nav>
+            <h2 class="menuTitle collectionIcon">COLLECTION</h2>
+            <nav>
+                <ul class="accMenu">
+                    <li>
+                        <a href="">Active (3)</a>
+                        <ul>
+                            <li><a href="">Active</a></li>
+                            <li><a href="">Active</a></li>
+                            <li>
+                                <a href="">Active</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Started</a></li>
+                    <li><a href="">Planned</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <section class="rightContent">
+        <div class="titleBar clearfix">
+            <h1 class="pageTitle">Planned</h1>
+            <ul class="filterControls">
+                <li><div class="btn filterIcon">FILTER</div></li>
+                <li><div class="btn sortIcon">SORT</div></li>
+                <li><div class="btn viewIcon">VIEW</div></li>
+            </ul>
+            <ul class="links">
+                <li><a class="active" href="">PRODUCTION ORDER</a></li>
+                <li><a href="">WORK ORDER</a></li>
+            </ul>
+        </div>
+        <div style="background:#fff;height:560px;">Grid content</div>
+    </section>
+    <div class="clear"></div>
+    <div class="sliderPanel">
+        <div class="sliderToggleBtn"></div>
+        <div class="sliderTab"></div>
+        <div class="sliderContentWrapper">
+            <div class="slideContent">
+                TestContent</br></br>
+                TestContent</br></br>
+                TestContent</br></br>
+                TestContent</br></br>
+                TestContent</br></br>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        //Slider open close script
+        $('.sliderToggleBtn').on('click',function(){
+            $('.sliderPanel').toggleClass('sliderOpen');
+        });
+        //End
+        //Accordion menu
+        $('.accMenu li').on('click',function(){
+            $('.accMenu ul').stop().slideUp();
+            $('.accMenu > li').removeClass('active');
+            $(this).find('ul').first().stop().slideDown();
+            $(this).addClass('active');
+        });
+        //End*/
+    });
+</script>

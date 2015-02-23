@@ -1,0 +1,20 @@
+<div class="container" data-ng-controller="LoginCtrl">
+	<section class="loginContainer">
+		<div class="logo"><img src="images/dashLogo.png" /></div>
+		<ul class="loginControl">
+			<li class="icon userControl"><input type="text" placeholder="User Name" data-ng-model="username"></li>
+			<li class="icon pwdControl"><input type="password" placeholder="Password" data-ng-model="password"></li>
+			<li><p id="error" class="text-error" data-ng-show="validationError.length > 0">
+				{{validationError}}
+			</p></li>
+			<li>
+				<!--<div class="rememberControl">
+					<input id="rememberPwd" type="checkbox">
+					<label for="rememberPwd">Remember</label>
+				</div>-->
+				<input type="submit" value="Login" class="loginBtn" data-ng-click="login()">
+				<div class="clear"></div>
+			</li>
+		</ul>
+	</section>
+</div>
